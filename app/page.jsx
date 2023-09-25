@@ -1,10 +1,24 @@
-import { SignIn } from '@clerk/nextjs'
-import React from 'react'
+import Image from 'next/image';
+import Link from 'next/link';
 
-const SignInPage = () => {
+export default function Home() {
   return (
-    <SignIn />
-  )
+    <>
+      <h1>Home</h1>
+      <h1 className="text-2xl mb-4 font-bold">Welcome Home</h1>
+      <div className="mb-4 bg-gray-100 p-4 m-4 rounded-lg">
+        <Link
+          href="https://clerk.com/"
+          className="text-xl text-blue-700 font-bold"
+        >
+          clerk.com
+        </Link>
+        <p className="mb-2">
+          This is a demo of Clerk authentication. Clerk is more than a "sign-in
+          box." Integrate complete user management UIs and APIs, purpose-built
+          for React, Next.js, and the Modern Web.
+        </p>
+      </div>
+    </>
+  );
 }
-
-export default SignInPage
